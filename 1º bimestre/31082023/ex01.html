@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telefone</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .telefone {
+            margin-top: 10px;
+            padding: 20px;
+            width: 280px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+
+        #tela {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid black;
+            height: 40px;
+            padding: 10px;
+            font-size: 22px;
+            letter-spacing: 3px;
+        }
+        .teclado {
+            padding: 20px;
+            width: 100%;
+            height: 300px;
+            border-radius: 4px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid black;
+        }
+        .fileira {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .numero {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .numero:hover {
+            box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.26);
+        }
+        
+        p {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        #botao {
+            margin: 20px;
+            width: 100px;
+            height: 30px;
+            font-size: 18px;
+            background-color: rgb(18, 134, 250);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            
+        }
+
+
+
+        
+    </style>
+</head>
+
+<body>
+    <h1>TELEFONE</h1>
+    <div class="telefone">
+        <input type="text" name="" id="tela">
+        <div class="teclado">
+            <div class="fileira">
+                <div class="numero" id="um" onclick="um()"><p>1</p></div>
+                <div class="numero" id="dois" onclick="dois()"><p>2</p></div>
+                <div class="numero" id="tres" onclick="tres()"><p>3</p></div>
+            </div>
+            <div class="fileira">
+                <div class="numero" id="quatro" onclick="quatro()"><p>4</p></div>
+                <div class="numero" id="cinco" onclick="cinco()"><p>5</p></div>
+                <div class="numero" id="seis" onclick="seis()"><p>6</p></div>
+            </div>
+            <div class="fileira">
+                <div class="numero" id="sete" onclick="sete()"><p>7</p></div>
+                <div class="numero" id="oito" onclick="oito()"><p>8</p></div>
+                <div class="numero" id="nove" onclick="nove()"><p>9</p></div>
+            </div>
+            <div class="fileira">
+                <div class="numero" id="asterisco" onclick="asterisco()"><p>*</p></div>
+                <div class="numero" id="zero" onclick="zero()"><p>0</p></div>
+                <div class="numero" id="hashtag" onclick="hashtag()"><p>#</p></div>
+            </div>
+        </div>
+    </div>
+    <input type="button" id="botao" value="Limpar" onclick="limpar()">
+</body>
+
+<script>
+    function um() {
+        var tela = document.getElementById('tela')
+        tela.value = tela.value + '1';
+    }
+    function dois() {
+        var tela = document.getElementById('tela')
+        tela.value = tela.value + '2';
+    }
+    function tres() {
+        var tela = document.getElementById('tela')
+        tela.value = tela.value + '3';
+    }
+    function quatro() {
+        var tela = document.getElementById('tela')
+        tela.value = tela.value + '4';
+    }
+    function cinco() {
+        var tela = document.getElementById('tela')
+        tela.value = tela.value + '5';
+    }
+    function seis() {
+        var tela = document.getElementById('tela')
+        tela.value = tela.value + '6';
+    }
+    function sete() {
+        var tela = document.getElementById('tela')
+        tela.value = tela.value + '7';
+    }
+    function oito() {
+        var tela = document.getElementById('tela')
+        tela.value = tela.value + '8';
+    }
+    function nove() {
+        var tela = document.getElementById('tela')
+        tela.value = tela.value + '9';
+    }
+    function asterisco() {
+        var tela = document.getElementById('tela')
+        tela.value = tela.value + '*';
+    }
+    function zero() {
+        var tela = document.getElementById('tela')
+        tela.value = tela.value + '0';
+    }
+    function hashtag() {
+        var tela = document.getElementById('tela')
+        tela.value = tela.value + '#';
+    }
+
+    function limpar() {
+        var tela = document.getElementById('tela')
+        tela.value = tela.value.slice(0, -1);;
+    }
+</script>
+
+</html>

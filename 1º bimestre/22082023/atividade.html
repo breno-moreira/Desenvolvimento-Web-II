@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="linhaFlex">
+            <div class="config">
+                <h4>Configuração de página</h4>
+                <div class="containerConfig">
+                    <div class="contentConfig">
+                        <p>Cor de fundo</p>
+                        <select name="CorFundo" id="CorFundo">
+                            <option value="white">Selecione uma cor</option>
+                            <option value="purple">Roxo</option>
+                            <option value="blue">Azul</option>
+                            <option value="black">Preto</option>
+                        </select>
+                    </div>
+                    <div class="contentConfig">
+                        <p>Cor de fundo card</p>
+                        <select name="CorFundoCard" id="CorFundoCard">
+                            <option value="white">Selecione uma cor</option>
+                            <option value="purple">Roxo</option>
+                            <option value="blue">Azul</option>
+                            <option value="black">Preto</option>
+                        </select>
+                    </div>
+                    <div class="contentConfig">
+                        <p>Cor de fonte</p>
+                        <select name="CorFonte" id="CorFonte">
+                            <option value="white">Selecione uma cor</option>
+                            <option value="purple">Roxo</option>
+                            <option value="blue">Azul</option>
+                            <option value="black">Preto</option>
+                        </select>
+                    </div>
+                    <div class="contentConfig">
+                        <p>Cor botão 1</p>
+                        <select name="CorBotao1" id="CorBotao1">
+                            <option value="white">Selecione uma cor</option>
+                            <option value="purple">Roxo</option>
+                            <option value="blue">Azul</option>
+                            <option value="black">Preto</option>
+                        </select>
+                    </div>
+                    <div class="contentConfig">
+                        <p>Cor botão 2</p>
+                        <select name="CorBotao2" id="CorBotao2">
+                            <option value="white">Selecione uma cor</option>
+                            <option value="purple">Roxo</option>
+                            <option value="blue">Azul</option>
+                            <option value="black">Preto</option>
+                        </select>
+                    </div>
+                    <div class="contentConfig">
+                        <p>Fonte</p>
+                        <select name="fonte" id="fonte">
+                            <option value="padrao">Selecione uma fonte</option>
+                            <option value="times">Times</option>
+                            <option value="arial">Arial</option>
+                        </select>
+                    </div>
+                </div>
+                <input class="botao" style="margin-top: 60px;" id="Salvar" type="button" value="Salvar"
+                    onclick="Salvar()">
+                <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparConfig()">
+            </div>
+        </div>
+
+        <div class="linhaFlex">
+
+            <!-- 1 - Deseja-se criar um sistema para calcular o valor de troco para um caixa de uma loja, onde o usuário irá digitar o valor total da compra e o valor pago pelo cliente.  -->
+
+            <div class="container">
+                <h3>Exercício 1 - Calcular troco</h3>
+                Valor total da compra:
+                <input type="number" name="" id="txt1">
+                <br><br>
+                Valor pago pelo cliente:
+                <input type="number" name="" id="txt2">
+                <br><br>
+                <input class="botao" id="calcularTroco" type="button" value="Calcular" onclick="calcularTroco()">
+                <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparTroco()">
+                <br><br>
+                <div id="resp1">Troco</div>
+            </div>
+
+            <!-- 2 - Em uma corrida automobilística, o grid de largada é determinado pelo tempo médio em que o piloto leva para efetuar cada volta no circuito. Considerando que o piloto fará 3 voltas, mostre o tempo total gasto e a média de tempo entre as voltas.  -->
+
+            <div class="container">
+                <h3>Exercício 2 - Corrida</h3>
+                Tempo volta 1:
+                <input type="number" name="" id="volta1">
+                <br><br>
+                Tempo volta 2:
+                <input type="number" name="" id="volta2">
+                <br><br>
+                Tempo volta 3:
+                <input type="number" name="" id="volta3">
+                <br><br>
+                <input class="botao" id="calcularMedia" type="button" value="Calcular" onclick="calcularMedia()">
+                <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparMedia()">
+                <br><br>
+                <div id="resp2">A média de tempo entre as voltas é: </div>
+            </div>
+
+            <!-- 3 - Uma nutricionista está tendo dificuldade em calcular o peso ideal de seus pacientes. Para solucionar este problema vamos desenvolver um programa que receba a altura do paciente, e mostre o seu peso ideal utilizando a seguinte equação: (Altura*Altura) * 25 -->
+
+            <div class="container">
+                <h3>Exercício 3 - Peso ideal</h3>
+                Altura:
+                <input type="number" name="" id="altura">
+                <br><br>
+                <input class="botao" id="CalcularPeso" type="button" value="Calcular" onclick="CalcularPeso()">
+                <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparPeso()">
+                <br><br>
+                <div id="resp3">Seu peso ideal é: </div>
+            </div>
+
+            <!-- 4 – Faça um sistema para calcular o valor a ser pago por um boleto de cobrança atrasado. Para isso, peça para o usuário digitar o valor do boleto e a quantidade de dias de atraso. Deverá ser calculado 2% de multa de atraso, R$ 2,00 de despesa de cobrança e também0,5%de juros ao dia.  -->
+
+            <div class="container">
+                <h3>Exercício 4 - Boleto</h3>
+                Valor do boleto:
+                <input type="number" name="" id="valorBoleto">
+                <br><br>
+                Dias de atraso:
+                <input type="number" name="" id="diasAtraso">
+                <br><br>
+                <input class="botao" id="CalcularBoleto" type="button" value="Calcular" onclick="CalcularBoleto()">
+                <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparBoleto()">
+                <br><br>
+                <div id="resp4">O valor a ser pago é: </div>
+            </div>
+        </div>
+
+        <div class="linhaFlex">
+
+            <!-- 5 – O tempo de gestação normalmente é calculado em semanas. Portanto, faça um algoritmo que peça para o usuário digitar a quantidade de semanas e mostre qual é a quantidade de meses e a quantidade de dias. Considere para este cálculo que todos os meses possuem 30dias. Exemplo: 25 semanas = 25*7 = 175dias 175/30 = 5.8 meses.  -->
+
+            <div class="container">
+                <h3>Exercício 5 - Gestação</h3>
+                Quantidade de semanas:
+                <input type="number" name="" id="semanas">
+                <br><br>
+                <input class="botao" id="CalcularGestacao" type="button" value="Calcular" onclick="CalcularGestacao()">
+                <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparGestacao()">
+                <br><br>
+                <div id="resp5">Tempo de gestação: </div>
+            </div>
+
+            <!-- 6 - considere que um carro faz 9km/litro de consumo com etanol. Já na gasolina ele faz 11km/litro. Faça um algoritmo em que o usuário irá digitar a distância que deseja viajar, opreço do etanol e o preço do litro da gasolina. Calcule e mostre o valor que será gasto casoabasteça com etanol e o valor gasto com gasolina.   -->
+
+            <div class="container">
+                <h3>Exercício 6 - Combustível</h3>
+                Distância de viagem:
+                <input type="number" name="" id="distancia">
+                <br><br>
+                Preço do etanol:
+                <input type="number" name="" id="etanol">
+                <br><br>
+                Preço da gasolina:
+                <input type="number" name="" id="gasolina">
+                <br><br>
+                <input class="botao" id="CalcularCombustivel" type="button" value="Calcular"
+                    onclick="CalcularCombustivel()">
+                <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparCombustivel()">
+                <br><br>
+                <div id="resp6">Valores se abastecer: </div>
+            </div>
+
+            <!-- 7 - O custo ao consumidor de um carro novo é a soma do custo de fábrica com a porcentagemdo distribuidor e dos impostos (aplicados, primeiro os impostos sobre o custo de fábrica, edepois a porcentagem do distribuidor sobre o resultado). Supondo que a porcentagem do distribuidor seja de 28% e os impostos 45%. Escrever um algoritmo que leia o custo de fábricade um carro e informe o custo ao consumidor do mesmo. -->
+
+            <div class="container">
+                <h3>Exercício 7 - Preço de carros</h3>
+                Custo de fábrica:
+                <input type="number" name="" id="fabrica">
+                <br><br>
+                <input class="botao" id="CalcularPreco" type="button" value="Calcular" onclick="CalcularPreco()">
+                <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparPreco()">
+                <br><br>
+                <div id="resp7">Custo do consumidor: </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

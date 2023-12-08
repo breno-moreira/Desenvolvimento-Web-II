@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page">
+        
+        <div class="linhaFlex">
+
+            <div class="container">
+                <p>Produto: <select name="p" id="produto">
+                    <option value="">Selecione um produto</option>
+                    <option id='coca'>Coca-cola Lata</option>
+                    <option id="coxinha">Coxinha</option>
+                    <option id="pao">Pão de Queijo</option>
+                </select></p>
+                        
+                <br>
+                <p>Quantidade: <input type="number" name="" id="quant"></p>
+                <br>
+                <p><input type="radio" name="pagamento" id="dinheiro"> Dinheiro</p>
+                <p><input type="radio" name="pagamento" id="cartao"> Cartão</p>
+                <br>
+                <p><input type="checkbox" name="entrega" id="entrega"> Para entrega</p>
+                <br>
+                <input class="botao" id="calcular" type="button" value="Calcular" onclick="calcular()">
+                <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limpar()">
+                <br><br>
+                <div id="resp1"><p>Total a pagar:</p></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

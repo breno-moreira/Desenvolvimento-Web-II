@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 2) Implemente um sistema Web que receba o nome do usuário e seu anodenascimento e o sistema deverá informar a categoria do atleta, seguindoaseguinte tabela:
+√ Abaixo de 14 - mirim
+√ 14 e 15 anos – infantil
+√ 16 e 17 anos – juvenil
+√ De 18 à 20 anos – juniores
+√ Acima de 20 – profissional -->
+    <div class="page">
+        <div class="container">
+            <h3>Exercício 2 - Categoria do atleta</h3>
+            <p>Nome:</p>
+            <input type="text" name="" id="nome">
+            <br><br>
+            <p>Ano de nascimento:</p>
+            <input type="number" name="" id="nasc">
+            <br><br>
+            <input class="botao" id="CalcularCategoria" type="button" value="Calcular"
+                onclick="CalcularCategoria()">
+            <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparCategoria()">
+            <br><br>
+            <div id="resp"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

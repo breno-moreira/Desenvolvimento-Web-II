@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <!-- 
+        Implemente um sistema Web que receba o nome do atleta e sua faixa etária emumaTAG <select> e o sistema deverá informar a categoria do atleta. Nessa TAG<selec.t. deverá ter os seguintes itens /opções: Abaixo de 14 anos; Entre 14 e 15 anos; Entre16 e 17 anos; De 18 à 20 anos; Acima de 20 anos. Após o usuário digitar o nomedoatleta e selecionar uma opção na TAG <select>, o usuário deverá clicar emumbotão e o sistema deverá informar o nome do atleta e em qual categoria o atletaseenquadra, de acordo com a tabela seguinte: - Abaixo de 14 anos - mirim; - Entre 14 e 15 anos – infantil; - Entre 16 e 17 anos – juvenil; - De 18 à 20 anos – juniores; - Acima de 20 anos – profissional
+     -->
+    <div class="page">
+        <div class="container">
+            <h3>Exercício 2 - Categoria do atleta</h3>
+            <p>Nome:</p>
+            <input type="text" name="" id="nome" autocomplete="off">
+            <br><br>
+            <p>Faixa etária:</p>
+            <select name="" id="idade">
+                <option value=""></option>
+                <option value="mirim">Abaixo de 14 anos</option>
+                <option value="infantil">Entre 14 e 15 anos</option>
+                <option value="juvenil">Entre 16 e 17 anos</option>
+                <option value="juniores">De 18 à 20 anos</option>
+                <option value="profissional">Acima de 20 anos</option>
+            </select>
+            <br><br>
+            <input class="botao" id="Calcular" type="button" value="Calcular"
+                onclick="CalcularCategoria()">
+            <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparCategoria()">
+            <br><br>
+            <div id="resp"></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

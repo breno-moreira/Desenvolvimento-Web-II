@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Formulário</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .formulario {
+            padding: 20px;
+            width: 250px;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+        h3 {
+            text-align: center;
+        }
+        #txt1 {
+            margin-top: 5px;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        #txt2 {
+            margin-top: 5px;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        #somar {
+            background-color: rgb(16, 227, 16);
+            width: 80px;
+            border-radius: 6px;
+            border: 2px solid black;
+            padding: 3px;
+            cursor: pointer;
+        }
+
+        #limpar{
+            background-color: red;
+            width: 80px;
+            border-radius: 6px;
+            border: 2px solid black;
+            padding: 3px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="formulario">
+        <h3>Exemplo de Formulário</h3>
+        Primeiro Número:
+        <input type="number" name="" id="txt1">
+        <br><br>
+        Segundo Número:
+        <input type="number" name="" id="txt2">
+        <br><br>
+        <input id="somar" type="button" value="Somar" onclick="calcular()">
+        <input id="limpar" type="button" value="Limpar" onclick="limpar()">
+        <br><br>
+        <div id="resp">Resultado</div>
+    </div>
+    <script>
+        function calcular() {
+            var txt1 = document.getElementById('txt1')
+            var txt2 = document.getElementById('txt2')
+            var resp = document.getElementById('resp')
+            var soma = Number(txt1.value) + Number(txt2.value)
+            resp.innerHTML = 'Soma: ' + soma
+        }
+
+        function limpar() {
+            var txt1 = document.getElementById('txt1')
+            var txt2 = document.getElementById('txt2')
+            var resp = document.getElementById('resp')
+            txt1.value = ""
+            txt2.value = ""
+            resp.innerHTML = 'Resultado'
+            txt1.focus()
+            
+        }
+    </script>
+</body>
+</html>

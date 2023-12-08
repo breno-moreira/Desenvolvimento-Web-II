@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            gap: 30px;
+            
+        }
+        .media{
+            padding: 20px;
+            width: 250px;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+
+        #ex3 {
+            width: 320px;
+        }
+        #txt1 {
+            margin-top: 5px;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        #txt2 {
+            margin-top: 5px;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        #largura {
+            margin-top: 5px;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        #altura {
+            margin-top: 5px;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        #nome {
+            margin-top: 5px;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        #ano {
+            margin-top: 5px;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        .botao {
+            background-color: rgb(228, 62, 190);
+            width: 80px;
+            border-radius: 6px;
+            border: 2px solid black;
+            padding: 3px;
+            cursor: pointer;
+        }
+        .botao:hover {
+            box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.26);
+        }
+
+        .limpar {
+            background-color: rgb(238, 170, 222);
+            width: 80px;
+            border-radius: 6px;
+            border: 2px solid black;
+            padding: 3px;
+            cursor: pointer;
+        }
+        .limpar:hover {
+            box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.26);
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 1- Peça para o usuário digitar 2 notas. Calcule e mostre a média deles -->
+    
+    <div class="media">
+        <h3>Exercício 1 - Média</h3>
+        Nota 1:
+        <input type="number" name="" id="txt1">
+        <br><br>
+        Nota 2:
+        <input type="number" name="" id="txt2">
+        <br><br>
+        <input class="botao" id="calcularMedia" type="button" value="Calcular" onclick="calcularMedia()">
+        <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparMedia()">
+        <br><br>
+        <div id="resp1">Resultado</div>
+    </div>
+
+    <!-- 2- Peça para o usuário digitar a largura e altura de um retangulo. Calcule e mostre sua área (largura * altura) -->
+    <div class="media">
+        <h3>Exercício 2 - Área</h3>
+        Largura:
+        <input type="number" name="" id="largura">
+        <br><br>
+        Altura:
+        <input type="number" name="" id="altura">
+        <br><br>
+        <input class="botao" id="calcularArea" type="button" value="Calcular" onclick="calcularArea()">
+        <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparArea()">
+        <br><br>
+        <div id="resp2">Resultado</div>
+    </div>
+
+    <!-- 3- Peça para o usuário digitar o nome de uma pessoa e seu ano de nascimento. Mostre uma mensagem semelahnte a esta: "Olá FULANO, você tem 25 anos", sendo que fulano foi o nome que o usuario digitou e 25 sua idade -->
+    <div class="media" id="ex3">
+        <h3>Exercício 3 - Nome e Idade</h3>
+        Nome:
+        <input type="text" name="" id="nome">
+        <br><br>
+        Ano de nascimento:
+        <input type="number" name="" id="ano">
+        <br><br>
+        <input class="botao" id="salvar" type="button" value="Salvar" onclick="salvar()">
+        <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparNome()">
+        <br><br>
+        <div id="resp3">Resultado</div>
+    </div>
+
+    <script>
+        //Exercício 1
+        function calcularMedia() {
+            var txt1 = document.getElementById('txt1').value
+            var txt2 = document.getElementById('txt2').value
+            var resp1 = document.getElementById('resp1')
+
+            if (txt1 == '' || txt2 == '') {
+                resp1.innerHTML = 'Preencha os campos!'
+            } else {
+                resp1.innerHTML = 'Média da notas: ' + (Number(txt1) + Number(txt2))/2
+
+            }
+        }
+
+        function limparMedia() {
+            var txt1 = document.getElementById('txt1')
+            var txt2 = document.getElementById('txt2')
+            var resp1 = document.getElementById('resp1')
+            txt1.value = ""
+            txt2.value = ""
+            resp1.innerHTML = 'Resultado'
+            
+        }
+        
+        //Exercício 2
+        function calcularArea() {
+            var largura = document.getElementById('largura').value
+            var altura = document.getElementById('altura').value
+            var resp2 = document.getElementById('resp2')
+            
+            if (largura == '' || altura == '') {
+                resp2.innerHTML = 'Preencha os campos!'
+            } else {
+                resp2.innerHTML = 'A área é: ' + (Number(largura) * Number(altura))
+
+            }
+        }
+
+        function limparArea() {
+            var largura = document.getElementById('largura')
+            var altura = document.getElementById('altura')
+            var resp2 = document.getElementById('resp2')
+            largura.value = ""
+            altura.value = ""
+            resp2.innerHTML = 'Resultado'
+            
+        }
+
+        //Exercício 3
+        function salvar() {
+            var nome = document.getElementById('nome').value
+            var ano = document.getElementById('ano').value
+            var resp3 = document.getElementById('resp3')
+
+            if (nome == '' || ano == '') {
+                resp3.innerHTML = 'Preencha os campos!'
+            } else {
+                resp3.innerHTML = 'Olá ' + nome + ', você tem ' + (2023 - ano) + ' anos.'
+
+            }
+        }
+
+        function limparNome() {
+            var nome = document.getElementById('nome')
+            var ano = document.getElementById('ano')
+            var resp3 = document.getElementById('resp3')
+            nome.value = ""
+            ano.value = ""
+            resp3.innerHTML = 'Resultado'
+            
+        }
+    </script>
+
+
+</body>
+</html>

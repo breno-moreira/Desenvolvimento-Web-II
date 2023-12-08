@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 4) Implemente um sistema Web que permita ao usuário digitar 3 números. Considere que cada número é o valor do tamanho de uma reta. Sabe-sequepara se formar um triângulo é necessário que o tamanho de cada retasejamenor que a soma das outras duas retas. Este sistema web deverá informar
+ao usuário se é possível montar um triângulo com esses 3 números ounão. Caso possa montar um triângulo, mostre ainda qual é o tipo de triânguloseguindo as seguintes regras:
+● Triângulo Equilátero: Todos os lados são iguais. ● Triângulo Isósceles: Dois lados são iguais. ● Triângulo Escaleno: Todos os lados são diferentes.-->
+    <div class="page">
+        <div class="container">
+            <h3>Exercício 4 - Triângulos</h3>
+            <p>Digite um número:</p>
+            <input type="number" name="" id="n1">
+            <br><br>
+            <p>Digite um número:</p>
+            <input type="number" name="" id="n2">
+            <br><br>
+            <p>Digite um número:</p>
+            <input type="number" name="" id="n3">
+            <br><br>
+            <input class="botao" id="CalcularTriangulo" type="button" value="Calcular"
+                onclick="CalcularTriangulo()">
+            <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparTriangulo()">
+            <br><br>
+            <div id="resp"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

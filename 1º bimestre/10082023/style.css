@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+.retangulo {
+    width: 1080px;
+    border: 2px solid black;
+    height: 200px;
+}
+
+.cards {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#vermelho {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    cursor: pointer;
+}
+
+#amarelo {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+#verde {
+    width: 200px;
+    height: 200px;
+    background-color: #13f113;
+    cursor: pointer;
+}
+
+#azul {
+    width: 200px;
+    height: 200px;
+    background-color: #0088ff;
+    cursor: pointer;
+}
+
+#preto {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    cursor: pointer;
+}

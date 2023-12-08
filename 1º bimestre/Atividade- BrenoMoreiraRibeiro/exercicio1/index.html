@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 1) Desenvolva um sistema Web que verifique se está compensando abastecer
+com gasolina ou com etanol. Esse sistema web deverá permitir ao usuáriodigitar preço atual da gasolina e do etanol e, após o usuário clicar nobotão“Calcular” o sistema deverá calcular e informar se está compensandoabastecer com álcool ou com gasolina. Para o álcool ser mais vantajosodoque a gasolina, o preço do litro tem que custar até 70% do litro da gasolina. -->
+    <div class="page">
+        <div class="container">
+            <h3>Exercício 1 - Abastecimento</h3>
+            <p>Preço atual do etanol:</p>
+            <input type="number" name="" id="etanol">
+            <br><br>
+            <p>Preço atual da gasolina:</p>
+            <input type="number" name="" id="gasolina">
+            <br><br>
+            <input class="botao" id="CalcularCombustivel" type="button" value="Calcular"
+                onclick="CalcularCombustivel()">
+            <input class="limpar" id="limpar" type="button" value="Limpar" onclick="limparCombustivel()">
+            <br><br>
+            <div id="resp"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

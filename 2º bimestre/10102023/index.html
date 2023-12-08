@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de produtos</title>
+    <style>
+        select {
+            width: 100px;
+        }
+        input {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p>Marca: <select name="" id="marca" onchange="carregarProdutos()">
+        <option value=""></option>
+        <option value="">Apple</option>
+        <option value="">Samsung</option>
+        <option value="">Xiaomi</option>
+    </select></p>
+    <p>Produto: <select name="" id="produtos">
+    </select></p>
+    <p>Quantidade: <input type="number" id="quant" onchange="calcularPreco()"></p>
+    <p id="precouni">Preço unitário: </p>
+    <p id="precotot">Preço total: </p>
+    <script src="script.js"></script>
+</body>
+</html>

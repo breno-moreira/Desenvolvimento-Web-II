@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cards">
+        <div class="card">
+            <img class="imagem" src="shopping.webp" alt="">
+            <p>Iphone 12 128GB - Roxo Tela 6,1” <br> 12MP</p>
+            <span>R$ 3.999,90</span>
+            <p>Magazine Luiza</p>
+        </div>
+        <div class="card">
+            <img class="imagem" src="shopping (1).webp" alt="">
+            <p>Iphone 13 128GB Estelar Tela 6,1” 12MP</p>
+            <span>R$ 4.364,10</span>
+            <p>Magazine Luiza</p>
+        </div>
+        <div class="card">
+            <img class="imagem" src="shopping (2).webp" alt="">
+            <p>Iphone 13 128GB Meia-noite Tela 6,1” 12MP</p>
+            <span>R$ 4.364,10</span>
+            <p>Magazine Luiza</p>
+        </div>
+        <div class="card">
+            <img class="imagem" src="shopping.webp" alt="">
+            <p>Iphone 12 128GB - Roxo Tela 6,1” <br> 12MP</p>
+            <span>R$ 3.999,90</span>
+            <p>Magazine Luiza</p>
+        </div>
+        <div class="card">
+            <img class="imagem" src="shopping (1).webp" alt="">
+            <p>Iphone 13 128GB Estelar Tela 6,1” 12MP</p>
+            <span>R$ 4.364,10</span>
+            <p>Magazine Luiza</p>
+        </div>
+
+    </div>
+    <div class="parcelas6"></div>
+    <div class="parcelas24"></div>
+    <div class="botao" onclick="evento()">Clique para ver as parcelas</div>
+    <script>
+
+        const v = document.querySelectorAll(".cards span");
+        var dolar = 1000
+        var cotacao = 5.31;
+        var reais = dolar * cotacao;
+        v.forEach((item) => {
+            item.innerHTML = 'R$ ' + reais.toFixed(2)
+        });
+
+        // calcule e mostre o preço do produto em reais dividido em 6 parcelas acrescentendo 10% de juros (mostre o valor total e o valor de cada parcela)
+
+        var juros = reais * 0.1
+        var totalJuros = reais + juros
+        var parcelas = totalJuros / 6
+
+        /* var parcelas6 = document.querySelector('.parcelas6')
+        parcelas6.innerHTML = 'O total parcelado em 6x é: ' + totalJuros + 'e cada parcela é: ' + parcelas */
+
+
+        //mostre também o preço em 24x acrescentando 25% de juros (mostre o valor total e o valor de cada parcela)
+        var juros2 = reais * 0.25
+        var totalJuros2 = reais + juros2
+        var parcelas2 = totalJuros2 / 24
+
+        /* var parcelas24 = document.querySelector('.parcelas24')
+        parcelas24.innerHTML = 'O total parcelado em 24x é: ' + totalJuros2 + 'e cada parcela é: ' + parcelas2.toFixed(2) */
+
+        function evento() {
+            var parcelas6 = document.querySelector('.parcelas6')
+            parcelas6.innerHTML = 'O total parcelado em 6x é: ' + totalJuros + 'e cada parcela é: ' + parcelas
+            var parcelas24 = document.querySelector('.parcelas24')
+            parcelas24.innerHTML = 'O total parcelado em 24x é: ' + totalJuros2 + 'e cada parcela é: ' + parcelas2.toFixed(2)
+        }
+    </script>
+
+</body>
+
+</html>

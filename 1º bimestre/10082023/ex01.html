@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="retangulo">
+            
+        </div>
+        <div class="cards">
+            <div onclick="vermelho()" class="card" id="vermelho"></div>
+            <div onclick="amarelo()" class="card" id="amarelo"></div>
+            <div onclick="verde()" class="card" id="verde"></div>
+            <div onclick="azul()" class="card" id="azul"></div>
+            <div onclick="preto()" class="card" id="preto"></div>
+        </div>
+    </div>
+    <script>
+        function vermelho() {
+            document.querySelector('.retangulo').style.backgroundColor = 'red'
+            document.querySelector('.retangulo').style.border = '2px solid red'
+        }
+        function amarelo() {
+            document.querySelector('.retangulo').style.backgroundColor = 'yellow'
+            document.querySelector('.retangulo').style.border = '2px solid yellow'
+        }
+        function verde() {
+            document.querySelector('.retangulo').style.backgroundColor = '#13f113'
+            document.querySelector('.retangulo').style.border = '2px solid #13f113'
+        }
+        function azul() {
+            document.querySelector('.retangulo').style.backgroundColor = '#0088ff'
+            document.querySelector('.retangulo').style.border = '2px solid #0088ff'
+        }
+        function preto() {
+            document.querySelector('.retangulo').style.backgroundColor = 'black'
+            document.querySelector('.retangulo').style.border = '2px solid black'
+        }
+    </script>
+</body>
+</html>

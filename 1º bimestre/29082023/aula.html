@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Nome: <input type="text" name="" id="nome">
+    <br>
+    Data de Nascimento: <input type="date" name="" id="nascto">
+    <br>
+    Senha: <input type="password" name="" id="senha">
+    <br>
+    <label>
+        <input type="checkbox" name="" id="matriculado">Matriculado
+    </label>
+    <br>
+    Cursos:
+    <label>
+        <input type="radio" name="curso" id="sis">Sistemas
+    </label>
+    <label>
+        <input type="radio" name="curso" id="dir">Direito
+    </label>
+    <label>
+        <input type="radio" name="curso" id="odo">Odondo
+    </label>
+    <br><br>
+    <select name="" id="turno">
+        <option>Noturno</option>
+        <option>Diurno</option>
+    </select>
+    <br><br>
+    <input type="button" value="Mostrar" onclick="mostrar()">
+    <br>
+    <div id="resp"></div>
+
+    <script>
+        function mostrar() {
+            var nome = document.getElementById('nome')
+            var nascto = document.getElementById('nascto')
+            var senha = document.getElementById('senha')
+            var matriculado = document.getElementById('matriculado')
+            var sis = document.getElementById('sis')
+            var dir = document.getElementById('dir')
+            var odo = document.getElementById('odo')
+            var turno = document.getElementById('turno')
+
+            var resp = document.getElementById('resp')
+            resp.innerHTML = '<p>Nome: ' + nome.value 
+                + '</p>' + '<p> Nascto: ' + nascto.value + '</p>' 
+                + '<p>Senha: ' + senha.value + '</p>' 
+                + '<p>Matriculado: ' + matriculado.checked + '</p>' 
+                + '<p>Sis: ' + sis.checked + '</p>' 
+                + '<p> Dir: ' + dir.checked + '</p>' 
+                + '<p> Odo: ' + odo.checked + '</p>' 
+                + '<p>Turno: ' + turno.options[turno.selectedIndex].text + '</p>'
+        }
+    </script>
+</body>
+
+</html>

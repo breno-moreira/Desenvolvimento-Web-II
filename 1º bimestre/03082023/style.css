@@ -1,0 +1,43 @@
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+.card {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 150px;
+    height: 340px;
+    border: 1px solid #c3c3c3;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+}
+.imagem {
+    width: 160px;
+    height: 160px;
+}
+p {
+    color: #1a0dab !important;
+}
+
+p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+span {
+    font-weight: bold;
+}
+
+.botao {
+    margin-top: 10px;
+    width: 200px;
+    height: 16px;
+    background-color: purple;
+    border-radius: 6px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}

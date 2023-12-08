@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Evento</title>
+    <style>
+        .botao {
+            width: 190px;
+            height: 16px;
+            background-color: purple;
+            border-radius: 6px;
+            padding: 5px;
+            color: white;
+            cursor: pointer;
+            margin: 15px 0;
+        }
+        .azul {
+            width: 220px;
+            height: 16px;
+            background-color: blue;
+            border-radius: 6px;
+            padding: 5px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="valor">???</div>
+    <div class="botao" onclick="evento()">Clique aqui para ver o valor</div>
+    <div class="azul" onclick="eventoazul()">Clique para deixar o fundo azul</div>
+
+    <script>
+        function evento() {
+            var x = 20
+            document.querySelector('#valor').innerHTML = x
+            document.querySelector('#valor').style.backgroundColor = 'red'
+        }
+        function eventoazul() {
+            document.querySelector('#valor').style.backgroundColor = 'blue'
+        }
+    </script>
+</body>
+</html>
